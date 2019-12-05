@@ -1,0 +1,90 @@
+div.backgroundimagecats {
+    background-image: url('images/twocats.jpg');
+    background-size: cover;
+}
+div.blur {
+    -webkit-filter: blur(5px); -moz-filter: blur(5px);
+    -o-filter: blur(5px); -ms-filter: blur(5px); 
+    filter: url(#blur); filter: blur(5px);  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+    -webkit-transition: 0.5s -webkit-filter linear;
+    -moz-transition: 0.5s -moz-filter linear;
+    -o-transition: 0.5s -o-filter linear;
+    transition:0.5s -webkit-filter linear;
+}
+div.unblur {
+    -webkit-filter: blur(0px); -moz-filter: blur(0px);
+    -o-filter: blur(0px); -ms-filter: blur(0px); 
+    filter: url(#blur); filter: blur(0px);  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+    -webkit-transition: 0.5s -webkit-filter linear;
+    -moz-transition: 0.5s -moz-filter linear;
+    -o-transition: 0.5s -o-filter linear;
+    transition:0.5s -webkit-filter linear;
+}
+.blur-effect {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+/* work on the overlay content */
+div.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+}
+h1 {
+    background-color: white;
+    border-block-color: grey;
+    color:green;
+}
+/*Can have multiple elements be added to have the following property*/
+ol {
+    background-color: white;
+    color:blue;
+}
+a:link {
+    background-color: white;
+    color:green;
+}
+a:visited {
+    color:grey;
+}
+a:hover {
+    color:lightcoral;
+    /*below removes the underline*/
+    text-decoration: none;
+}
+ul {
+    background-color: white;
+    /*to get rid of bullets*/
+    list-style-type: none;
+}
+/* Only the paragraph field is allowed to use the special class*/
+p.special {
+    background-color: white;
+    color:orangered;
+    font-weight: bold;
+}
+p:hover {
+    color:pink;
+}
+/* selects any em tag that is inside p tag, this is styling based on location*/
+p em{
+    color:purple;
+    font-size: 200%;
+}
+/* Styles the p tag when it is used RIGHT AFTER the ordered list*/
+ol + p {
+    font-size: 150%;
+}
+/*will style any element with the class spoofy when contained inside a p, right after a h1 
+and is inside the body tag*/
+body h1 + p .spoofy {
+    color: white;
+    background-color: darkblue;
+    padding: 5px;
+}

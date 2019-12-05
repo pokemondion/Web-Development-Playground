@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+
+    <head>
+        <meta charset="utf-8">
+        <title>CSS workspace</title>
+        <link rel="stylesheet" href="styles.css"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="indexmodule.js"></script>
+    </head>
+
+    <body ng-controller="controller as vm"> 
+        <div class="backgroundimagecats" ng-class="vm.blur? 'blur':'unblur'">
+            <h1>Written in the header 1 tags</h1>
+            <p>Written in the paragraph <span class="spoofy">tags</span></p>
+            <p>the following is an ordered list</p>
+            <button ng-click="vm.blurEffect()">click me!</button>
+            <ol>
+                <li>shannon</li>
+                <li>dion</li>
+            </ol>
+            <p>the following is an unordered list</p>
+            <ul>
+                <li>shannon</li>
+                <li>dion</li>
+                <li>{{vm.gg}}</li>
+            </ul>
+            <p>click <a href="https://www.google.ca/">here</a> to go to google!</p>
+            <p class="special">This paragraph uses a class in CSS and no other element could use this class</p>
+            <h1 class="special">This header tries to use the "special" class</h1>
+            <p><em>hello</em></p>
+            <p>Written in the paragraph <span class="spoofy">tags</span></p>
+            <p>the following is an ordered list</p>
+            <p>Written in the paragraph <span class="spoofy">tags</span></p>
+            <p>the following is an ordered list</p>
+            <p>Written in the paragraph <span class="spoofy">tags</span></p>
+            <p>the following is an ordered list</p>
+            <p>Written in the paragraph <span class="spoofy">tags</span></p>
+            <p>the following is an ordered list</p>
+        </div>
+        <!-- below div element is used for creating the modal -->
+        <div> <!-- ng-class="vm.blur? 'overlay':''" -->
+            
+        </div>
+    </body>
+</html>
